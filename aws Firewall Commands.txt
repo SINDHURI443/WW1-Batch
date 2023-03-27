@@ -1,0 +1,10 @@
+[root@ip-172-31-39-28 ~]# systemctl enable firewalld
+[root@ip-172-31-39-28 ~]# service FirewallD start
+Redirecting to /bin/systemctl start FirewallD.service
+Failed to start FirewallD.service: Unit not found.
+[root@ip-172-31-39-28 ~]# service firewalld start
+Redirecting to /bin/systemctl start firewalld.service
+[root@ip-172-31-39-28 ~]# firewall-cmd --zone=public --add-port=8088/tcp --permanent
+success
+[root@ip-172-31-39-28 ~]# firewall-cmd --reload
+success
